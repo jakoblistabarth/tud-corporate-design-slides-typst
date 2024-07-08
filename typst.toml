@@ -1,0 +1,16 @@
+[package]
+name = "tud-slides"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Jakob Listabarth <https://github.com/jakoblistabarth>"]
+license = "MIT"
+description = "Unofficial presentation template for TU Dresden (Technische Universität Dresden)."
+repository = "https://github.com/jakoblistabarth/tud-slides-typst"
+keywords = ["TUD", "Technische Universität Dresden", "Presentation"]
+categories = ["presentation"]
+exclude = ["main.pdf"]
+
+[template]
+path = "template/"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
