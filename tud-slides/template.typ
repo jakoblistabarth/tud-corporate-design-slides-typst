@@ -1,4 +1,4 @@
-#import "@preview/polylux:0.3.1": polylux-slide, logic, utils
+#import "@preview/polylux:0.3.1": polylux-slide, logic, utils, pause, only
 
 #let tud-outer-margin = 15pt
 #let tud-inner-margin = 60pt
@@ -38,7 +38,8 @@
     paper: "presentation-16-9",
     margin: 0pt
   )
-  set text(font: ("Open Sans"), lang: lang)
+  set text(font: ("Open Sans"), lang: lang, fill: tud-darkblue)
+  set list(marker: [---])
 
   show figure.caption: set text(size: .6em, fill: luma(150))
 
@@ -59,13 +60,11 @@
 }
 
 #let title-slide = {
-  show: polylux-slide
-
-  let title-content = {
+  let content = {
     place(dx: 0pt, dy: 0pt)[
       #rect(fill: tud-gradient, width: 100%, height: 100%)
     ]
-    
+
     block(
       width: 100%,
       height: 15%,
@@ -74,9 +73,10 @@
       grid(
         columns: (1fr, auto),
         image("logos/TU_Dresden_Logo_blau.svg", height: 100%),
-        image("logos/dresden-concept.png")
+        image("logos/dresden-concept.svg")
       )
     )
+
     place(dx: 0pt, dy: 0pt,
       block(
         width: 100%,
@@ -104,7 +104,7 @@
     )
   }
 
-  polylux-slide(title-content)
+  polylux-slide(content)
 }
 
 #let footer = block(width: 100%, height: 100%, fill: white)[
@@ -133,7 +133,7 @@
           Slide #logic.logical-slide.display()/#strong(utils.last-slide-number)
         ],
         image(
-          "logos/dresden-concept.png",
+          "logos/dresden-concept.svg",
           height: 5em
         )
       )
@@ -148,7 +148,7 @@
     height: 100%,
     inset: (x: tud-inner-margin),
   )[
-    #set text(18pt)
+    #set text(16pt)
     #set block(above: 1.2em)
     #body
   ]
