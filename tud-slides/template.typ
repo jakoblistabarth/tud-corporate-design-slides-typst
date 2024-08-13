@@ -164,6 +164,27 @@
   polylux-slide(wrapped-body)
 }
 
+#let fluid-slide(body) = {
+  // Content block
+  let wrapped-body = block(
+    width: 100%,
+    height: 100%,
+  )[
+    #set text(16pt)
+    #set block(above: 1.2em)
+    #body
+  ]
+
+  set page(
+    footer: footer,
+    footer-descent: 0pt,
+    margin: (
+      bottom: tud-bottom-margin
+    ),
+  )
+  polylux-slide(wrapped-body)
+}
+
 #let section-slide(title: none, subtitle: none) = {
   // Content block
   let wrapped-body = block(
