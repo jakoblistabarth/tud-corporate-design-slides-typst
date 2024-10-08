@@ -1,1 +1,1 @@
-#import "tud-slides/template.typ": *
+#import "tud-presentation/template.typ": *

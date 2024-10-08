@@ -1,6 +1,6 @@
-#import "@preview/tud-slides:0.1.0": *
+#import "@preview/tud-presentation:0.1.0": *
 
-#show: tud-slides.with(
+#show: tud-presentation.with(
   title: "Presentation templates",
   subtitle: "Corporate design rules - Guidelines for using the template and ensuring accessibility",
   author: "Firstname Lastname",

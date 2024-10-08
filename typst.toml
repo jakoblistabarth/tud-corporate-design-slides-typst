@@ -1,11 +1,11 @@
 [package]
-name = "tud-slides"
+name = "tud-presentation"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Jakob Listabarth <https://github.com/jakoblistabarth>"]
 license = "MIT"
-description = "Unofficial presentation template for TU Dresden (Technische Universität Dresden)."
-repository = "https://github.com/jakoblistabarth/tud-slides-typst"
+description = "P`resentation template for TU Dresden (Technische Universität Dresden)."
+repository = "https://github.com/jakoblistabarth/tud-presentation-typst"
 keywords = ["TUD", "Technische Universität Dresden", "Presentation"]
 categories = ["presentation"]
 exclude = ["main.pdf"]
