@@ -26,7 +26,7 @@
 ]
 
 #slide[
-  = Slide title for a slide with a figure
+  = _Slide title_ *for* a slide with a figure
 
   #figure(
     rect(
@@ -51,6 +51,6 @@
   = Slide title
 
   - #lorem(4)
-  - #lorem(2)
+  - _#lorem(2)_
   - #lorem(3)
 ]
