@@ -45,10 +45,29 @@ paths=(
   "thumbnail.png"
 )
 
+# Define a list of files exclude
+exclude_files=("main.pdf")
+
+# Function to check if a file is in the exclude list
+is_excluded() {
+  local file=$1
+  for exclude in "${exclude_files[@]}"; do
+    if [ "$exclude" == "$file" ]; then
+      return 0
+    fi
+  done
+  return 1
+}
+
 # Iterate over the list of paths
 for path in "${paths[@]}"; do
   # Check if the path exists in the source directory
   if [ -e "$path" ]; then
+    # Check if the current path is in the exclude list
+    if is_excluded "$(basename "$path")"; then
+      echo "Skipping $path"
+      continue
+    fi
     # Check if path is a directory
     if [ -d "$path" ]; then
       echo "Copying directory $path ..."
