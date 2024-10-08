@@ -37,6 +37,7 @@ fi
 # Create a list of files or directories to copy
 paths=(
   "template"
+  "lib.typ"
   "tud-presentation"
   "LICENSE"
   "README.md"
