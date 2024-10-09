@@ -38,7 +38,7 @@ fi
 paths=(
   "template/main.typ"
   "lib.typ"
-  "tud-presentation"
+  "tud-slides"
   "LICENSE"
   "README.md"
   "typst.toml"
