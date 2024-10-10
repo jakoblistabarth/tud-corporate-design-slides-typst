@@ -1,4 +1,4 @@
-# Typst template for slide in TU Dresden's the corporate design :microphone: 
+# Typst template for slide in TU Dresden's the corporate design :microphone:
 
 This template can be used to create presentations in [Typst](https://github.com/typst/typst) with the corporate design of [TU Dresden](https://www.tu-dresden.de/).
 
@@ -31,5 +31,9 @@ This will watch your file and recompile it to a pdf when the file is saved. For 
 
 ## Todos
 
-- [ ] Add more slide layouts (e.g. 2-column layout)
+- [ ] use package [repo template](ttps://github.com/SillyFreak/typst-package-template)
+  - [ ] use their scripts
+  - [ ] add example.pdf
+  - [ ] use .typstignore?
 - [ ] Port to [touying](https://github.com/touying-typ/touying)
+- [ ] Add more slide layouts (e.g. 2-column layout)
