@@ -1,4 +1,4 @@
-#import "@preview/polylux:0.3.1": polylux-slide, logic, utils, pause, only
+#import "@preview/polylux:0.4.0": slide as polylux-slide, toolbox, only
 
 #let tud-outer-margin = 17pt
 #let tud-inner-margin = 60.5pt
@@ -152,7 +152,7 @@ let guides = {
           context [#tud-location-occasion.get() \/\/ #tud-date.get().display(tud-date-format)]
         },
         [
-          Slide #logic.logical-slide.display()/#strong(utils.last-slide-number)
+          Slide #toolbox.slide-number/#strong(toolbox.last-slide-number)
         ],
         pad(right: 9pt,
           image(
