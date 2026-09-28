@@ -1,5 +1,10 @@
 # Typst template for slide in TU Dresden's the corporate design :microphone:
 
+[!WARNING]
+The slides in this package use the outdated corporate design (pre-2025).
+This template is no longer recommended for new projects.
+An updated version, aligned with the current corporate design, is currently in development and will be released soon.
+
 This template can be used to create presentations in [Typst](https://github.com/typst/typst) with the corporate design of [TU Dresden](https://www.tu-dresden.de/).
 
 ## Usage
@@ -28,12 +33,3 @@ typst w main.typ
 ```
 
 This will watch your file and recompile it to a pdf when the file is saved. For writing, you can use [Vscode](https://code.visualstudio.com/) with these extensions: [Typst LSP](https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp) and [Typst Preview](https://marketplace.visualstudio.com/items?itemName=mgt19937.typst-preview). Or use the [typst web app](https://typst.app/) (here you need to upload the fonts).
-
-## Todos
-
-- [ ] use package [repo template](ttps://github.com/SillyFreak/typst-package-template)
-  - [ ] use their scripts
-  - [ ] add example.pdf
-  - [ ] use .typstignore?
-- [ ] Port to [touying](https://github.com/touying-typ/touying)
-- [ ] Add more slide layouts (e.g. 2-column layout)

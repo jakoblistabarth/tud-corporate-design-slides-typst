@@ -1,4 +1,5 @@
-#import "@preview/polylux:0.4.0": slide as polylux-slide, toolbox, only
+#import "@preview/polylux:0.4.0": *
+#import "@preview/polylux:0.4.0": slide as polylux-slide
 
 #let tud-outer-margin = 17pt
 #let tud-inner-margin = 60.5pt
@@ -127,7 +128,7 @@ let guides = {
     )
   }
 
-  polylux-slide(content)
+  slide(content)
 }
 
 #let footer = block(width: 100%, height: 100%, fill: white)[
@@ -144,14 +145,13 @@ let guides = {
           ),
         ),
         {
-          set block(above: .35em)
           context [#tud-short-title.get()]
-          parbreak()
+          linebreak()
           context [#tud-organizational-unit.get() / #tud-short-author.get()]
-          parbreak()
+          linebreak()
           context [#tud-location-occasion.get() \/\/ #tud-date.get().display(tud-date-format)]
         },
-        [
+        context[
           Slide #toolbox.slide-number/#strong(toolbox.last-slide-number)
         ],
         pad(right: 9pt,
@@ -184,7 +184,24 @@ let guides = {
     footer: footer,
     footer-descent: 0pt,
   )
-  polylux-slide(wrapped-body)
+  polylux-slide({
+    wrapped-body
+    place(center +horizon,
+      rect(
+        fill: yellow,
+        stroke: orange,
+        inset: 2em,
+        radius: .5em,
+        width: 50%,
+      )[
+        The slides in this package use the outdated corporate design (pre-2025).
+
+        *This template is no longer recommended for new projects.*
+
+        An updated version, aligned with the current corporate design, is currently in development and will be released soon.
+      ]
+    )
+    })
 }
 
 #let fluid-slide(body) = {
@@ -205,7 +222,7 @@ let guides = {
     footer: footer,
     footer-descent: 0pt,
   )
-  polylux-slide(wrapped-body)
+  slide(wrapped-body)
 }
 
 #let section-slide(title: none, subtitle: none) = {
@@ -234,5 +251,5 @@ let guides = {
       rect(width: 100%, height: 100%, fill: tud-gradient)
     },
   )
-  polylux-slide(wrapped-body)
+  slide(wrapped-body)
 }
